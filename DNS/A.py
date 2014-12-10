@@ -3,7 +3,7 @@
 
 # pip install dnspython
 
-# A记录，将主机名转换成IP地址
+# A记录：将主机名转换成IP地址
 
 import dns.resolver
 
