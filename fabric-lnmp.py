@@ -19,7 +19,7 @@ env.passwords = {
 @roles('webservers')    # webtask任务函数引用webservers角色修饰符
 def webtask():    # 部署nginx php php-fpm等环境
     print yellow("Install nginx php php-fpm...")
-    with settings(warn_only = True):
+    with settings(warn_only = True):    # 当warn_only=True, 函数执行出错时, 仅提示出错信息, 而不中止函数, 默认为False
         run("yum -y install nginx")
         run("yum -y install php-fpm php-mysql php-mbstring php-xml php-mcrypt php-gd")
         run("chkconfig --levels 235 php-fpm on")
